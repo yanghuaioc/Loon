@@ -1,4 +1,35 @@
 #copy 自可莉&墨鱼
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Safari.png
+[Rewrite]
+# bd  xxx (百度搜索)
+^https:\/\/duckduckgo\.com\/\?q=bd\+([^&]+).+ 302 https://www.baidu.com/s?wd=$1
+
+# gh  xxx (github搜索)
+^https:\/\/duckduckgo\.com\/\?q=gh\+([^&]+).+ 302 https://github.com/search?q=$1
+
+# gh  xxx (github搜索用户)
+^https:\/\/duckduckgo\.com\/\?q=gu\+([^&]+).+ 302 https://github.com/search?q=$1&type=users
+
+# yy  xxx (中国医药信息查询)
+^https:\/\/duckduckgo\.com\/\?q=yy\+([^&]+).+ 302 https://m.dayi.org.cn/search?keyword=$1
+
+# ys  xxx (易搜云盘搜索)
+^https:\/\/duckduckgo\.com\/\?q=ys\+([^&]+).+ 302 https://yiso.fun/info?searchKey=$1
+
+# wo  xxx (玩偶哥哥影视搜索)
+^https:\/\/duckduckgo\.com\/\?q=wo\+([^&]+).+ 302 https://www.wogg.net/vodsearch/-------------.html?wd=$1
+
+# bl  xxx (b站客户端搜索)
+^https:\/\/duckduckgo\.com\/\?q=bl\+([^&]+).+ 302 bilibili://search?keyword=$1
+
+# yt  xxx (YouTube客户端搜索)
+^https:\/\/duckduckgo\.com\/\?q=yt\+([^&]+).+ 302 youtube://results?search_query=$1
+
+# xxx (无关键词默认google搜索)
+^https:\/\/duckduckgo\.com\/\?q=([^&]+).+ 302 https://www.google.com/search?q=$1
+
+[Mitm]
+hostname = duckduckgo.com
 [Rewrite]
 # bd  xxx (百度搜索)
 ^https:\/\/duckduckgo\.com\/\?q=bd\+([^&]+).+ 302 https://www.baidu.com/s?wd=$1
